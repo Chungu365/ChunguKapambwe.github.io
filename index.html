@@ -444,6 +444,118 @@
             color: var(--accent-primary);
         }
 
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .about-text::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+            font-size: 4rem;
+            color: var(--accent-primary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover .skill-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .tech-toolkit {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .tech-toolkit h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+            color: var(--text-primary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(124, 58, 237, 0.2));
+            border-color: var(--accent-primary);
+            transform: translateY(-3px);
+        }
+
         /* Footer */
         footer {
             background: var(--bg-card);
@@ -494,6 +606,8 @@
             <div class="logo">CK.</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -519,6 +633,56 @@
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-content">
+            <p class="about-text">
+                I'm a Business Analyst leveraging data to drive strategic decisions across industries. Currently pursuing my CFA designation to deepen my expertise in investment analysis and portfolio management. I specialize in bridging the gap between complex financial data and actionable business insights—combining technical analytics with financial acumen to solve real business problems. Whether it's building analytical models, creating executive dashboards, or conducting valuation analysis, I transform data into strategic advantages.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <h2 class="section-title">Skills & Expertise</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">📊</div>
+                <h3>Data & Analytics</h3>
+                <p>Transform complex data into clear insights using Python, R, SQL, Tableau, and Power BI. Skilled in statistical analysis, forecasting, and building interactive dashboards that drive decision-making.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">💰</div>
+                <h3>Financial Analysis</h3>
+                <p>Strong foundation in financial statement analysis, valuation methods, and quantitative techniques. Experienced in ratio analysis, cash flow modeling, and equity/fixed income fundamentals through CFA Level I studies.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">💡</div>
+                <h3>Business Intelligence</h3>
+                <p>Bridge technical analysis with business strategy—from stakeholder collaboration to executive reporting. Translate data findings into actionable recommendations that align with organizational goals.</p>
+            </div>
+        </div>
+        <div class="tech-toolkit">
+            <h3>Technical Toolkit</h3>
+            <div class="tech-tags">
+                <span class="tech-tag">Excel (Advanced)</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">R</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">Jupyter</span>
+                <span class="tech-tag">RStudio</span>
             </div>
         </div>
     </section>
